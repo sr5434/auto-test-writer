@@ -42,7 +42,7 @@ export default function Home() {
           Generate tests
         </button>
       </form>
-      <ReactMarkdown class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" children={generatedTest} />
+      <ReactMarkdown class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" children={[generatedTest]} />
     </div>
   )
 }
