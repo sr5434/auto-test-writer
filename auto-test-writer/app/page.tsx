@@ -28,7 +28,7 @@ export default function Home() {
       <p>This app uses AI to generate tests for Python or Javascript code.</p>
       <br />
       <form onSubmit={submitHandler}>
-        <label className="block mb-2 pt-6 text-sm font-medium text-gray-900 dark:text-white" for="codeInput">Paste your code here:</label>
+        <label className="block mb-2 pt-6 text-sm font-medium text-gray-900 dark:text-white" htmlFor="codeInput">Paste your code here:</label>
         <textarea
           id="codeInput"
           value={input}
