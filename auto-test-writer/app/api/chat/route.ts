@@ -12,7 +12,6 @@ export const runtime = 'edge';
 
 export async function POST(req: Request) {
   const { code } = await req.json();
-  console.log(code);
   // Ask OpenAI for a streaming completion given the prompt
   //console.log(bio)
   //console.log(vibe)

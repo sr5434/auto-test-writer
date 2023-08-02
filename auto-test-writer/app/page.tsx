@@ -16,12 +16,13 @@ export default function Home() {
       api: "/api/chat",
       onResponse() {},
     });
-    const submitHandler = async (e: any) => {
-      await setCode(input);
-      handleSubmit(e);
-    }
-    const lastMessage = messages[messages.length - 1];
-    const generatedTest = lastMessage?.role === "assistant" ? lastMessage.content : null;
+  const submitHandler = async (e: any) => {
+    await setCode(input);
+    handleSubmit(e);
+  }
+  const lastMessage = messages[messages.length - 1];
+  const generatedTest = lastMessage?.role === "assistant" ? lastMessage.content : "";
+
   return (
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <h1 className="text-5xl font-extrabold">Auto Test Writer</h1>
@@ -38,11 +39,11 @@ export default function Home() {
         <br />
         <button 
           type="submit"
-          className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 shadow">
+          className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 shadow-lg">
           Generate tests
         </button>
       </form>
-      <ReactMarkdown class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{generatedTest}</ReactMarkdown>
+      <ReactMarkdown className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{generatedTest}</ReactMarkdown>
     </div>
   )
 }
