@@ -2,7 +2,9 @@
 
 ## React2Shell Vulnerability Check (CVE-2025-66478)
 
-This project has been scanned for the React2Shell vulnerability using the official fix tool.
+This project has been scanned for the React2Shell vulnerability using the fix tool as requested.
+
+**Note:** The `fix-react2shell-next` tool was used as specified in the security requirements. The tool reported no vulnerabilities found in the current project configuration.
 
 ### Last Scan Date
 December 6, 2025
